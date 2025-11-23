@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy 22nd Birthday Dipsy!</title>
+    <!-- Tailwind CSS (CDN for simplicity) -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <!-- Local Styles -->
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/animations.css">
+</head>
+<body>
+
+    <!-- Intro Overlay -->
+    <div id="startOverlay">
+        <h1 style="color:white; font-family: 'Dancing Script', cursive; font-size: 3rem;">For Dipsy ❤️</h1>
+        <p style="color: #ddd; margin-bottom: 20px;">Turn up your volume...</p>
+        <button class="start-btn" onclick="startExperience()">Open Birthday Card</button>
+    </div>
+
+    <!-- Background Elements -->
+    <div class="shapes">
+        <!-- 10 shapes for background animation -->
+        <li class="shape"></li><li class="shape"></li>
+        <li class="shape"></li><li class="shape"></li>
+        <li class="shape"></li><li class="shape"></li>
+        <li class="shape"></li><li class="shape"></li>
+        <li class="shape"></li><li class="shape"></li>
+    </div>
+
+    <canvas id="confetti"></canvas>
+
+    <!-- Main Content Area -->
+    <div class="card-container" id="cardContainer">
+        <!-- Content injected by scripts/navigation.js -->
+    </div>
+    
+    <!-- Hidden YouTube Player Wrapper -->
+    <!-- This wrapper ensures the iframe (which replaces #globalPlayer) remains invisible but active -->
+    <div style="position: absolute; bottom: 0; left: 0; width: 1px; height: 1px; overflow: hidden; opacity: 0.01; pointer-events: none; z-index: -1;">
+        <div id="globalPlayer"></div>
+    </div>
+
+    <!-- Scripts -->
+    <script type="module" src="scripts/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,1 @@
+"{\n  \"name\": \"dipsy-birthday-website\",\n  \"version\": \"1.0.0\",\n  \"description\": \"Birthday website for Dipsy\",\n  \"main\": \"index.html\",\n  \"scripts\": {\n    \"start\": \"echo 'Use Live Server extension in VS Code to run this project'\"\n  },\n  \"author\": \"\",\n  \"license\": \"ISC\"\n}\n"
