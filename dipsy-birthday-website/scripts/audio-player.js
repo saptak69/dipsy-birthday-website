@@ -39,7 +39,8 @@ export class AudioPlayer {
                     },
                     'onError': (e) => {
                         console.error("YouTube Player Error:", e.data);
-                        // Optional: trigger next page or alert user
+                        // If a song fails to load (restricted), we could potentially skip? 
+                        // For now, we log it.
                     }
                 }
             });
@@ -49,7 +50,6 @@ export class AudioPlayer {
     play(videoId) {
         if (this.isReady && this.player && this.player.loadVideoById) {
             console.log("Loading song:", videoId);
-            // Using object syntax is often more reliable
             this.player.loadVideoById({
                 'videoId': videoId,
                 'startSeconds': 0,
